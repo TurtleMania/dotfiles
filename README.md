@@ -12,4 +12,4 @@ Packages can be installed with `stow <package name>`.
 Neovim using the Lazy plugin manager. It requires rust (for tree-sitter).
 
 ### Desk-env
-Desktop environment using Hyprland. It requires waybar, wofi, and hyprpaper. The default apps are kitty, firefox, and dolphin.
+Desktop environment using Hyprland. It requires waybar, wofi, playerctl, pamixer, and hyprpaper. The default apps are kitty, firefox, and dolphin.
