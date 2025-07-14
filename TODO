@@ -1,0 +1,6 @@
+Desk-Env
+    Primary: Hypland
+    Task Bar: Waybar
+    App Launcher: wofi (rofi?)
+    Wallpaper Manager: Hyprpaper (pywal?)
+    Terminal:
