@@ -16,4 +16,5 @@ Desk-Env
 Shell
     Terminal: [Kitty](https://wiki.archlinux.org/title/Kitty)
     Shell: [Bash](https://wiki.archlinux.org/title/Bash) ([Zsh](https://wiki.archlinux.org/title/Zsh)?)
+        [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
     Editor: [Neovim](https://wiki.archlinux.org/title/Neovim)
