@@ -4,7 +4,7 @@
 alias ls='ls --color=auto'
 alias la='ls -A'
 alias grep='grep --color=auto'
-PS1="%n %~%# "
+PS1="%n %~%(!.#.$) "
 
 eval "$(zoxide init zsh)"
 fastfetch
