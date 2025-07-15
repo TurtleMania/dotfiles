@@ -17,3 +17,4 @@ Various command line items
 
  - Kitty. The terminal emulator.
  - Neovim using the Lazy plugin manager. It requires rust (for tree-sitter).
+ - Zoxide. A better cd.

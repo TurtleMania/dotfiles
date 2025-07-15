@@ -2,7 +2,7 @@ Desk-Env
     Primary: [Hyprland](https://wiki.archlinux.org/title/Hyprland)
     Task Bar: [Waybar](https://wiki.archlinux.org/title/Waybar)
     App Launcher: [Wofi](https://github.com/SimplyCEO/wofi) ([Rofi](https://wiki.archlinux.org/title/Rofi)?)
-    Wallpaper Manager: [Hyprpaper](https://github.com/hyprwm/hyprpaper) ([Pywal](https://github.com/dylanaraps/pywal)?)
+    Wallpaper Manager: [Hyprpaper](https://github.com/hyprwm/hyprpaper)
 
     Web Browser: [Firefox](https://wiki.archlinux.org/title/Firefox)
     File Manager: [Dolphin](https://wiki.archlinux.org/title/Dolphin) ([Yazi](https://yazi-rs.github.io/docs/installation/)?)
