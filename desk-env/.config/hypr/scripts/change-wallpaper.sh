@@ -10,5 +10,4 @@ selectedFile=~/.config/hypr/selected-wallpaper
 
 cp $1 $selectedFile --update=all
 
-killall hyprpaper
-hyprpaper &
+~/.config/hypr/scripts/reload-wallpaper.sh
