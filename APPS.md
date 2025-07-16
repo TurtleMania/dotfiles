@@ -21,3 +21,4 @@
  - Editor: [Neovim](https://wiki.archlinux.org/title/Neovim)
  - [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
  - [Zoxide](https://github.com/ajeetdsouza/zoxide)
+ - [Fzf](https://github.com/junegunn/fzf)
