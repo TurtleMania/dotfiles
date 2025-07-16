@@ -1,6 +1,3 @@
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
 autoload -Uz vcs_info
 
 zstyle ':vcs_info:*' enable git svn
@@ -17,4 +14,7 @@ alias la='ls -A'
 alias grep='grep --color=auto'
 
 eval "$(zoxide init zsh)"
+
+(cat ~/.cache/wal/sequences &)
+
 fastfetch

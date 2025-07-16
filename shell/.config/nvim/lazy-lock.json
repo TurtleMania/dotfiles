@@ -6,6 +6,7 @@
   "nvim-treesitter": { "branch": "main", "commit": "8d8ca0996c79348cd59cf31065954f40fcf1679f" },
   "nvim-web-devicons": { "branch": "master", "commit": "0422a19d9aa3aad2c7e5cca167e5407b13407a9d" },
   "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
+  "pywal16.nvim": { "branch": "main", "commit": "446ae689c8e4569b9537cddadb28d6e939658ea5" },
   "telescope-fzy-native.nvim": { "branch": "master", "commit": "282f069504515eec762ab6d6c89903377252bf5b" },
   "telescope.nvim": { "branch": "master", "commit": "b4da76be54691e854d3e0e02c36b0245f945c2c7" },
   "tokyonight.nvim": { "branch": "main", "commit": "057ef5d260c1931f1dffd0f052c685dcd14100a3" },
