@@ -1,9 +1,10 @@
 # Desk-Env
  - Primary: [Hyprland](https://wiki.archlinux.org/title/Hyprland)
  - Task Bar: [Waybar](https://wiki.archlinux.org/title/Waybar)
- - App Launcher: [Wofi](https://github.com/SimplyCEO/wofi) ([Rofi](https://wiki.archlinux.org/title/Rofi)?)
+ - App Launcher: [Rofi](https://wiki.archlinux.org/title/Rofi)
  - Wallpaper Manager: [Hyprpaper](https://github.com/hyprwm/hyprpaper)
  - Theme Manager: [Pywal16](https://github.com/eylles/pywal16/wiki)
+ - Night Mode: [Hyprsunset](https://github.com/hyprwm/hyprsunset)
  - Color Picker: [Hyprpicker](https://github.com/hyprwm/hyprpicker)
 
  - Web Browser: [Firefox](https://wiki.archlinux.org/title/Firefox)

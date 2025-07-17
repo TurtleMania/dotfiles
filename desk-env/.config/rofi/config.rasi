@@ -1,0 +1,25 @@
+configuration {
+    display-drun: "Applications: ";
+    display-window: "Windows: ";
+    drun-display-format: "{icon} {name}";
+    font: "0xProto Nerd Font Propo 12";
+    show-icons: true;
+}
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+window {
+    border-radius: 10px;
+    }
+
+element {
+    border-radius: 10px;
+    }
+
+element selected {
+    border-radius: 10px;
+    }
+
+scrollbar {
+    border-radius: 10px;
+    }
