@@ -1,8 +1,7 @@
 #!/usr/bin/sh
 
-killall hyprpaper
-hyprpaper &
-
 selectedFile=~/.config/hypr/selected-wallpaper
+
+hyprctl hyprpaper reload ,"$selectedFile"
 
 wal -i $selectedFile --cols16 -n
