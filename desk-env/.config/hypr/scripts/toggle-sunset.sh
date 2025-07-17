@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 if pgrep hyprsunset; then
     killall hyprsunset
