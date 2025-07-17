@@ -10,7 +10,7 @@ Packages can be installed with `stow <package name>`.
 ## The Packages
 
 ### Desk-env
-Desktop environment using Hyprland. It requires waybar, wofi, playerctl, pamixer, and hyprpaper. The default apps are kitty, firefox, and dolphin. You have theme management managed by pywal16.
+Desktop environment using Hyprland. It requires waybar, wofi, playerctl, pamixer, and hyprpaper, hyprpicker, wl-clipboard, and wl-clip-persist. The default apps are kitty, firefox, and dolphin. You have theme management managed by pywal16.
 
 ### Shell
 Various command line items

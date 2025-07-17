@@ -4,6 +4,7 @@
  - App Launcher: [Wofi](https://github.com/SimplyCEO/wofi) ([Rofi](https://wiki.archlinux.org/title/Rofi)?)
  - Wallpaper Manager: [Hyprpaper](https://github.com/hyprwm/hyprpaper)
  - Theme Manager: [Pywal16](https://github.com/eylles/pywal16/wiki)
+ - Color Picker: [Hyprpicker](https://github.com/hyprwm/hyprpicker)
 
  - Web Browser: [Firefox](https://wiki.archlinux.org/title/Firefox)
  - File Manager: [Dolphin](https://wiki.archlinux.org/title/Dolphin) ([Yazi](https://yazi-rs.github.io/docs/installation/)?)
