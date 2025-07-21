@@ -8,11 +8,17 @@
     "margin-right": 10,
     "margin-left": 10,
 
+    "reload_style_on_change": true,
+
     "modules-left": [
+        "custom/arch",
         "hyprland/workspaces"
     ],
-    "modules-center": [],
+    "modules-center": [
+        "mpris"
+    ],
     "modules-right": [
+        "group/hardware",
         "backlight",
         "pulseaudio",
         "network",
@@ -20,5 +26,79 @@
         "clock"
     ],
 
-    "reload_style_on_change": true
+    "hyprland/workspaces": {
+        // TODO
+    },
+
+    "custom/arch": {
+        "format": "\udb82\udcc7"
+    },
+    "mpris": {
+        "format": "{status_icon}  {dynamic} {player_icon} ",
+        "interval": 1,
+        "ignored-players": [
+            "firefox"
+        ],
+        "player-icons": {
+            "ncspot": "\udb81\udcc7"
+        },
+        "status-icons": {
+            "playing": "\uf04b",
+            "paused": "\uf04c",
+            "stopped": "\uf04d"
+        },
+        "dynamic-order": [
+            "artist",
+            "title",
+            "position",
+            "length"
+        ]
+    },
+
+    "backlight": {
+        "format": "{icon}",
+        "tooltip-format": "{percent}%",
+        "format-icons": [
+            "🌑", "🌘", "🌘", "🌘", "🌗", "🌗", "🌗", "🌗", "🌗",
+            "🌖", "🌖", "🌖", "🌖", "🌖", "🌖", "🌖", "🌖", "🌕",
+            "🌕" ] // Hacky thing to work with exponential brightness
+    },
+    "battery": {
+        "format": "{icon}",
+        "tooltip-format": "{capacity}% {timeTo}",
+        "format-icons": [ "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ]
+    },
+    "clock": {
+        "tooltip-format": "<tt>{calendar}</tt>",
+    },
+    "group/hardware": {
+        "orientation": "inherit",
+        "drawer": {},
+        "modules": [
+            "custom/hardware-icon",
+            "cpu",
+            "memory",
+            "disk",
+            "temperature",
+            "network"
+        ]
+    },
+    "custom/hardware-icon": {
+        "format": "󰇅"
+    },
+    "cpu": {
+        // TODO
+    },
+    "memory": {
+        // TODO
+    },
+    "disk": {
+        // TODO
+    },
+    "temperature": {
+        // TODO
+    },
+    "network": {
+        // TODO
+    }
 }
