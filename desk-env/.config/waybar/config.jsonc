@@ -19,19 +19,22 @@
     ],
     "modules-right": [
         "group/hardware",
+        "privacy",
         "backlight",
         "pulseaudio",
-        "network",
         "battery",
         "clock"
     ],
 
     "hyprland/workspaces": {
-        // TODO
+        "format": "",
+        "persistent-workspaces": {
+            "*": 4
+        }
     },
 
     "custom/arch": {
-        "format": "\udb82\udcc7"
+        "format": "󰣇"
     },
     "mpris": {
         "format": "{status_icon}  {dynamic} {player_icon} ",
@@ -40,12 +43,12 @@
             "firefox"
         ],
         "player-icons": {
-            "ncspot": "\udb81\udcc7"
+            "ncspot": "󰓇"
         },
         "status-icons": {
-            "playing": "\uf04b",
-            "paused": "\uf04c",
-            "stopped": "\uf04d"
+            "playing": "",
+            "paused": "",
+            "stopped": ""
         },
         "dynamic-order": [
             "artist",
@@ -61,15 +64,45 @@
         "format-icons": [
             "🌑", "🌘", "🌘", "🌘", "🌗", "🌗", "🌗", "🌗", "🌗",
             "🌖", "🌖", "🌖", "🌖", "🌖", "🌖", "🌖", "🌖", "🌕",
-            "🌕" ] // Hacky thing to work with exponential brightness
+            "🌕"
+        ] // Hacky thing to work with exponential brightness
+    },
+    "pulseaudio": {
+        "format": "{icon} ",
+        "format-muted": " ",
+        "tooltip-format": "{volume}%",
+        "format-icons": [
+            "", "", ""
+        ]
     },
     "battery": {
         "format": "{icon}",
         "tooltip-format": "{capacity}% {timeTo}",
-        "format-icons": [ "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ]
+        "format-icons": [
+            "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
+        ]
     },
     "clock": {
         "tooltip-format": "<tt>{calendar}</tt>",
+    },
+    "privacy": {
+        "modules": [
+            {
+                "type": "screenshare",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            },
+            {
+                "type": "audio-out",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            },
+            {
+                "type": "audio-in",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            }
+        ],
     },
     "group/hardware": {
         "orientation": "inherit",
@@ -78,6 +111,7 @@
             "custom/hardware-icon",
             "cpu",
             "memory",
+            "memory#swap",
             "disk",
             "temperature",
             "network"
@@ -87,18 +121,40 @@
         "format": "󰇅"
     },
     "cpu": {
-        // TODO
+        "format": "  {usage}%  "
     },
     "memory": {
-        // TODO
+        "format": " {percentage}%  ",
+        "tooltip-format": "{used:0.1f} / {total:0.1f} GiB used"
+    },
+    "memory#swap": {
+        "format": " {swapPercentage}% 󰓡 ",
+        "tooltip-format": "{swapUsed:0.1f} / {swapTotal:0.1f} GiB used"
     },
     "disk": {
-        // TODO
+        "format": "{percentage_used}%  ",
+        "tooltip-format": "{used} / {total} used on \"{path}\""
     },
     "temperature": {
-        // TODO
+        "format": "{icon}",
+        "tooltip-format": "{temperatureC}󰔄 ",
+        "format-icons": [
+            "", "", "", "", ""
+        ]
     },
     "network": {
-        // TODO
+        "format": "{ifname}",
+        "format-ethernet": "",
+        "format-wifi": " {icon} ",
+        "format-disconnected": "󰤭",
+        "format-disabled": "",
+        "tooltip-format": "",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-wifi": "Frequency: {frequency}\nSignal Strength: {signalStrength}%\nUpload: {bandwidthUpBytes}\nDownload: {bandwidthDownBytes}",
+        "tooltip-format-disconnected": "Disconnected",
+        "tooltip-format-disabled": "",
+        "format-icons": [
+            "󰤯", "󰤟", "󰤢", "󰤥", "󰤨"
+        ]
     }
 }
