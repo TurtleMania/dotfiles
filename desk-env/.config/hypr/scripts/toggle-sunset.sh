@@ -3,5 +3,5 @@
 if pgrep hyprsunset; then
     killall -9 hyprsunset
 else
-    hyprsunset -t 2500
+    ~/.config/hypr/scripts/enable-sunset.sh
 fi
