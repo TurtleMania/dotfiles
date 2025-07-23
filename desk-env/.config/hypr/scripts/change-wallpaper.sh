@@ -6,7 +6,7 @@ elif [ ! -f $1 ]; then
     exit 1
 fi
 
-selectedFile=~/.config/hypr/selected-wallpaper
+selectedFile=~/.cache/selected-wallpaper
 
 cp $1 $selectedFile --update=all
 

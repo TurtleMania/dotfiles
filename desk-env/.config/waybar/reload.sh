@@ -1,4 +1,6 @@
 #!/usr/bin/sh
 
-killall waybar
-waybar &
+if pgrep -x "waybar"; then
+    killall waybar
+    waybar &
+fi

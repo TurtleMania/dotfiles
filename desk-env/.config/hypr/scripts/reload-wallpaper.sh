@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 
-selectedFile=~/.config/hypr/selected-wallpaper
+selectedFile=~/.cache/selected-wallpaper
 
 hyprctl hyprpaper reload ,"$selectedFile"
 
