@@ -1,6 +1,10 @@
 #!/usr/bin/sh
 
-selectedFile=~/.cache/selected-wallpaper
+if [ ! -d ~/.cache/desktop ]; then
+    mkdir ~/.cache/desktop
+fi
+
+selectedFile=~/.cache/desktop/selected-wallpaper
 
 hyprctl hyprpaper reload ,"$selectedFile"
 
