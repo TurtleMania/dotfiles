@@ -3,11 +3,11 @@
 * {
     font-family: "0xProto Nerd Font";
     font-size: 14px;
-    border-radius: 30px;
+    min-height: 20px;
 }
 
 window#waybar {
-    background-color: transparent;
+    background: transparent;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -15,4 +15,34 @@ window#waybar {
 #window {
   font-size: 9px;
   color: @background;
+}
+
+.modules-left, .modules-center, .modules-right {
+    color: @foreground;
+    background: @background;
+    border-radius: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#workspaces button {
+    color: @color6;
+    border-radius: 5px;
+}
+
+#workspaces button:hover {
+    background: inherit;
+    transition: none;
+}
+
+#workspaces button.active {
+    color: @color11;
+}
+
+#custom-arch {
+    color: #0F94D2;
+}
+
+#backlight {
+    font-size: 20px;
 }

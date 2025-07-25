@@ -36,14 +36,15 @@
     "custom/arch": {
         "format": "󰣇"
     },
+
     "mpris": {
-        "format": "{status_icon}  {dynamic} {player_icon} ",
+        "format": "{status_icon}  {dynamic} {player_icon}",
         "interval": 1,
         "ignored-players": [
             "firefox"
         ],
         "player-icons": {
-            "ncspot": "󰓇"
+            "ncspot": "󰓇 "
         },
         "status-icons": {
             "playing": "",
@@ -65,16 +66,18 @@
             "🌑", "🌘", "🌘", "🌘", "🌗", "🌗", "🌗", "🌗", "🌗",
             "🌖", "🌖", "🌖", "🌖", "🌖", "🌖", "🌖", "🌖", "🌕",
             "🌕"
-        ] // Hacky thing to work with exponential brightness
+        ] // Hacky thing to work better with exponential brightness
     },
+
     "pulseaudio": {
-        "format": "{icon} ",
-        "format-muted": " ",
+        "format": "{icon}   ",
+        "format-muted": "",
         "tooltip-format": "{volume}%",
         "format-icons": [
             "", "", ""
         ]
     },
+
     "battery": {
         "format": "{icon}",
         "tooltip-format": "{capacity}% {timeTo}",
@@ -82,9 +85,11 @@
             "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
         ]
     },
+
     "clock": {
         "tooltip-format": "<tt>{calendar}</tt>",
     },
+
     "privacy": {
         "modules": [
             {
@@ -104,49 +109,69 @@
             }
         ],
     },
+
     "group/hardware": {
         "orientation": "inherit",
         "drawer": {},
         "modules": [
             "custom/hardware-icon",
+            "custom/seperator",
             "cpu",
+            "custom/seperator",
             "memory",
+            "custom/seperator",
             "memory#swap",
+            "custom/seperator",
             "disk",
+            "custom/seperator",
             "temperature",
-            "network"
+            "network",
+            "custom/seperator"
         ]
     },
+
     "custom/hardware-icon": {
-        "format": "󰇅"
+        "format": "󰇅",
+        "tooltip": false // TODO Set tooltip to fastfetch output without logo
     },
+
+    "custom/seperator": {
+        "format": "|",
+        "tooltip": false
+    },
+    
     "cpu": {
-        "format": "  {usage}%  "
+        "format": "{usage}%  "
     },
+
     "memory": {
-        "format": " {percentage}%  ",
+        "format": "{percentage}%  ",
         "tooltip-format": "{used:0.1f} / {total:0.1f} GiB used"
     },
+
     "memory#swap": {
-        "format": " {swapPercentage}% 󰓡 ",
+        "format": "{swapPercentage}% 󰓡 ",
         "tooltip-format": "{swapUsed:0.1f} / {swapTotal:0.1f} GiB used"
     },
+
     "disk": {
         "format": "{percentage_used}%  ",
         "tooltip-format": "{used} / {total} used on \"{path}\""
     },
+
     "temperature": {
-        "format": "{icon}",
-        "tooltip-format": "{temperatureC}󰔄 ",
+        "format": "{icon}  ",
+        "tooltip-format": "{temperatureC}󰔄",
         "format-icons": [
             "", "", "", "", ""
         ]
     },
+
     "network": {
         "format": "{ifname}",
         "format-ethernet": "",
-        "format-wifi": " {icon} ",
-        "format-disconnected": "󰤭",
+        "format-wifi": "{icon} ",
+        "format-disconnected": "󰤭 ",
         "format-disabled": "",
         "tooltip-format": "",
         "tooltip-format-ethernet": "{ifname}",
