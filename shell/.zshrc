@@ -17,4 +17,6 @@ eval "$(zoxide init zsh)"
 
 (cat ~/.cache/wal/sequences &)
 
+export EDITOR=nvim
+
 fastfetch
