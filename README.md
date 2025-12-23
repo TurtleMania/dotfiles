@@ -1,4 +1,4 @@
-TODO: packages.py and symlinks.py scripts.
+TODO: symlinks.py scripts.
 # Dotfiles
 These are my personal dotfiles. Don't bring opinions here.
 
@@ -9,11 +9,12 @@ Use the [packages.py](packages.py) (`./packages.py update` to install) script to
 ## Usage
 ### [packages.py](packages.py)
 Commands: 
-  add <package>: Add a package to the index.
-  remove <package>: Remove a package from the index.
+  add <packages>: Add a package to the index.
+  remove <packages>: Remove a package from the index.
   update: Update the system packages to match the index.
   list: List the packages in the index.
   query: Query system packages installed by this script.
+  clean: Clean and sort package index (Use this before commiting changes).
 
 ### [symlinks.py](symlink.py)
 Commands:
