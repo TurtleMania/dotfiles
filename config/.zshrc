@@ -11,22 +11,11 @@ setopt PROMPT_SUBST
 PROMPT='%n ${vcs_info_msg_0_}%(!.#.$) '
 RPROMPT='%~'
 
-# Enable history
-HISTSIZE=5000
-HIST_FILE=.zsh_history
-SAVEHIST=$HISTSIZE
-HISTDUP=erase
-setopt appendhistory
-setopt hist_save_no_dups
-setopt hist_ignore_dups
-setopt hist_find_no_dups
-
 # Setup aliases
 alias ls='ls --color=auto'
 alias la='ls -A'
 alias grep='grep --color=auto'
 alias c='clear'
-alias rr='while [ $? -ne 0 ]; do eval $(history -p !!); done'
 
 # Add .local/bin to PATH
 path+=$HOME/.local/bin
