@@ -1,12 +1,8 @@
-// Load with --load-config examples/2.jsonc
-// Note that you must replace the image path to an existing image to display it.
-
 {
-    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "display": {
         "separator": "  ",
         "constants": [
-            "─────────────────" // {$1}, used in Custom module
+            "─────────────────" // {$1}
         ],
         "key": {
             "type": "icon",
@@ -38,7 +34,6 @@
         "uptime",
         {
             "type": "custom",
-            // {#1} is equivalent to `\u001b[1m`. {#} is equivalent to `\u001b[m`
             "format": "├{$1} {#1}Hardware Information{#} {$1}┤"
         },
         "cpu",
