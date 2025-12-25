@@ -23,12 +23,16 @@ def get_app_data_dir() -> Path:
     return p
 
 def get_linked_index() -> set[Path]:
+    links = set()
     try:
         with (get_app_data_dir() / "symlinks.txt").open(mode='r') as f:
             data = f.read()
-        return set([Path(x) for x in data.splitlines()])
+        for line in data.splitlines():
+            if line != "":
+                links.add(Path(line)) 
     except FileNotFoundError:
-        return set()
+        pass
+    return links
 
 def write_linked_list(items: set[Path]):
     with (get_app_data_dir() / "symlinks.txt").open(mode='w') as f:
@@ -45,10 +49,12 @@ def generate_links() -> set[Path]:
         relative_path = config_path.relative_to(base_config_path)
         if (home_path / relative_path).is_relative_to(base_config_path):
             continue
+        if (home_path / relative_path).exists():
+            continue
         working_path = None
         for path in relative_path.parents:
             end_path = home_path / path
-            if not (end_path.is_dir() or end_path.is_file()):
+            if not end_path.is_dir():
                 working_path = path
                 continue
             if working_path is None:
@@ -65,11 +71,36 @@ def sync_links(_args):
     old_links = get_linked_index()
     home_path = Path.home()
     config_path = get_script_dir() / "config"
+    links = old_links
     for link in old_links - current_links:
-        (home_path / link).unlink()
+        try:
+            (home_path / link).unlink()
+            links.remove(link)
+        except Exception as e:
+            write_linked_list(links)
+            raise e
     for link in current_links - old_links:
-        (home_path / link).symlink_to(config_path / link)
-    write_linked_list(current_links)
+        try:
+            (home_path / link).symlink_to(config_path / link)
+            links.add(link)
+        except Exception as e:
+            write_linked_list(links)
+            raise e
+    write_linked_list(links)
+
+def remove_links(_args):
+    del _args
+    current_links = get_linked_index()
+    home_path = Path.home()
+    links = set(current_links)
+    for link in current_links:
+        try:
+            (home_path / link).unlink()
+            links.remove(link)
+        except Exception as e:
+            write_linked_list(links)
+            raise e
+    write_linked_list(links)
 
 def list_links(_args):
     del _args
@@ -89,6 +120,10 @@ if __name__ == "__main__":
     list_parser = subparsers.add_parser("list",
         help="List the linked files.")
     list_parser.set_defaults(func=list_links)
+
+    remove_parser = subparsers.add_parser("remove",
+        help="Remove symlinks.")
+    remove_parser.set_defaults(func=remove_links)
 
     args = parser.parse_args()
     args.func(args)

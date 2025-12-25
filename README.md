@@ -18,4 +18,5 @@ Commands:
 ### [symlinks.py](symlink.py)
 Commands:
   sync: Create and remove symlinks to match packages.
+  remove: Remove symlinks.
   list: List the created symlinks.
