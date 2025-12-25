@@ -1,4 +1,3 @@
-TODO: symlinks.py scripts.
 # Dotfiles
 These are my personal dotfiles. Don't bring opinions here.
 
@@ -19,5 +18,4 @@ Commands:
 ### [symlinks.py](symlink.py)
 Commands:
   sync: Create and remove symlinks to match packages.
-  list: List the config files add.
-  query: Query config files installed by this script.
+  list: List the created symlinks.
