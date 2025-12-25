@@ -49,18 +49,16 @@ def generate_links() -> set[Path]:
         relative_path = config_path.relative_to(base_config_path)
         if (home_path / relative_path).is_relative_to(base_config_path):
             continue
-        if (home_path / relative_path).exists():
+        if (home_path / relative_path).is_symlink():
+            paths.add(relative_path)
             continue
-        working_path = None
-        for path in relative_path.parents:
-            end_path = home_path / path
-            if not end_path.is_dir():
-                working_path = path
+        for path in reversed([relative_path] + list(relative_path.parents)):
+            if (home_path / path).is_symlink():
+                paths.add(path)
+                break
+            if (home_path / path).is_dir():
                 continue
-            if working_path is None:
-                paths.add(relative_path)
-            else:
-                paths.add(working_path)
+            paths.add(path)
             break
     return paths 
 
@@ -69,6 +67,9 @@ def sync_links(_args):
     del _args
     current_links = generate_links()
     old_links = get_linked_index()
+    #print(current_links)
+    #print(old_links)
+    #return
     home_path = Path.home()
     config_path = get_script_dir() / "config"
     links = old_links
