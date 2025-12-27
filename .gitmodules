@@ -1,0 +1,3 @@
+[submodule "config/.config/quickshell/wallpapers"]
+	path = config/.config/quickshell/wallpapers
+	url = https://github.com/TurtleMania/wallpapers.git
