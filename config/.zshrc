@@ -16,6 +16,13 @@ alias ls='ls --color=auto'
 alias la='ls -A'
 alias grep='grep --color=auto'
 alias c='clear'
+alias gi='git init'
+alias gs='git status'
+alias gd='git diff'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gu='git pull'
 
 # Add .local/bin to PATH
 path+=$HOME/.local/bin
