@@ -1,1 +1,7 @@
+fastfetch
+kitty
+nvim
 python
+quickshell
+tmux
+zsh
