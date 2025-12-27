@@ -45,6 +45,9 @@ def generate_links() -> set[Path]:
     for path in base_config_path.rglob("*"):
         if path.is_dir():
             continue
+        # Ignore symlinks from config directory as these are uncommitable
+        if path.is_symlink():
+            continue
         config_path = path.resolve()
         relative_path = config_path.relative_to(base_config_path)
         if (home_path / relative_path).is_relative_to(base_config_path):
