@@ -12,6 +12,7 @@ Rectangle {
     color: Colors.background
     radius: 5
     Rectangle {
+        // TODO: Add current day as default and navigation button
         id: calendarView
         anchors.fill: parent
         color: "transparent"
@@ -25,8 +26,10 @@ Rectangle {
             Text {
                 Layout.row: 0
                 Layout.column: 1
-                Layout.horizontalStretchFactor: 5
-                Layout.verticalStretchFactor: 1
+                Layout.horizontalStretchFactor: 2
+                Layout.verticalStretchFactor: 2
+                Layout.fillWidth: true
+                Layout.fillHeight: true
                 text: grid.title
                 color: Colors.foreground
             }
@@ -34,8 +37,8 @@ Rectangle {
             DayOfWeekRow {
                 Layout.row: 1
                 Layout.column: 1
-                Layout.horizontalStretchFactor: 5
-                Layout.verticalStretchFactor: 1
+                Layout.fillWidth: true
+                Layout.fillHeight: true
                 locale: grid.locale
                 delegate: Text {
                     text: shortName
@@ -50,8 +53,8 @@ Rectangle {
             WeekNumberColumn {
                 Layout.row: 2
                 Layout.column: 0
-                Layout.horizontalStretchFactor: 1
-                Layout.verticalStretchFactor: 10
+                Layout.fillWidth: true
+                Layout.fillHeight: true
                 month: grid.month
                 year: grid.year
                 locale: grid.locale
@@ -70,7 +73,9 @@ Rectangle {
                 Layout.row: 2
                 Layout.column: 1
                 Layout.horizontalStretchFactor: 5
-                Layout.verticalStretchFactor: 10
+                Layout.verticalStretchFactor: 1
+                Layout.fillWidth: true
+                Layout.fillHeight: true
                 month: Calendar.December
                 year: 2025
                 locale: Qt.locale("en_US")
@@ -86,9 +91,12 @@ Rectangle {
         }
     }
 
+    // TODO: Set a decent overview as initialItem
+    // TODO: add footer using Page
     StackView {
         id: stack
         anchors.fill: parent
+        anchors.margins: 10
         initialItem: calendarView
     }
 }
