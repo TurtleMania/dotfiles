@@ -5,8 +5,6 @@ import subprocess
 from pathlib import Path
 import os
 
-# Install/uninstall uses pacman, may change to yay or another AUR helper to
-# support AUR packages.
 # Utility functions
 def get_script_dir() -> Path:
     return Path(os.path.dirname(os.path.realpath(__file__)))
@@ -57,8 +55,8 @@ def install_packages(packages: set[str] | list[str]) -> bool:
     if len(packages) == 0:
         return True
     try:
-        print("> sudo pacman -S --needed " + ' '.join(packages))
-        subprocess.run(["sudo", "pacman", "-S", "--needed"] + list(packages), check=True)
+        print("> yay -S --needed " + ' '.join(packages))
+        subprocess.run(["yay", "-S", "--needed"] + list(packages), check=True)
         return True
     except subprocess.CalledProcessError:
         return False
@@ -67,8 +65,8 @@ def uninstall_packages(packages: set[str] | list[str]) -> bool:
     if len(packages) == 0:
         return True
     try:
-        print("> sudo pacman -Runs --needed " + ' '.join(packages))
-        subprocess.run(["sudo", "pacman", "-Runs"] + list(packages), check=True)
+        print("> yay -Runs --needed " + ' '.join(packages))
+        subprocess.run(["yay", "-Runs"] + list(packages), check=True)
         return True
     except subprocess.CalledProcessError:
         return False
