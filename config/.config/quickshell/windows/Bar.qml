@@ -4,6 +4,7 @@ import QtQuick
 import QtQuick.Layouts
 import qs.data
 import qs.theme
+import qs.widgets
 
 PanelWindow {
     id: root
@@ -53,21 +54,55 @@ PanelWindow {
 
         RowLayout {
             anchors.fill: parent
-            spacing: 6
             anchors.leftMargin: Spacing.windowSpacing
             anchors.rightMargin: Spacing.windowSpacing
             anchors.topMargin: 1
             anchors.bottomMargin: 1
-            Text {
+            uniformCellSizes: true
+            spacing: 0
+
+            RowLayout {
+                spacing: 6
                 Layout.fillWidth: true
                 Layout.fillHeight: true
                 Layout.horizontalStretchFactor: 1
-                horizontalAlignment: Text.AlignRight
-                verticalAlignment: Text.AlignVCenter
 
-                text: DateTime.time() + "\n" + DateTime.date()
-                color: Colors.foreground
-                font: Fonts.standard
+                Workspaces {
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    Layout.horizontalStretchFactor: 1
+                }
+            }
+
+            RowLayout {
+                spacing: 6
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                Layout.horizontalStretchFactor: 1
+
+                MPRIS {
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    Layout.horizontalStretchFactor: 1
+                }
+            }
+
+            RowLayout {
+                spacing: 6
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                Layout.horizontalStretchFactor: 1
+
+                Text {
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    Layout.horizontalStretchFactor: 1
+                    text: DateTime.time() + "\n" + DateTime.date()
+                    horizontalAlignment: Text.AlignRight
+                    verticalAlignment: Text.AlignVCenter
+                    color: Colors.foreground
+                    font: Fonts.standard
+                }
             }
         }
     }
