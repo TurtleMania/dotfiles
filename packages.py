@@ -82,7 +82,7 @@ def update_package(_args):
     del _args
     package_list = get_package_list()
     installed_list = get_installed_list()
-    if install_packages(package_list - installed_list) and uninstall_packages(installed_list - package_list):
+    if uninstall_packages(installed_list - package_list) and install_packages(package_list - installed_list):
         write_installed_list(package_list)
 
 def list_package(_args):
