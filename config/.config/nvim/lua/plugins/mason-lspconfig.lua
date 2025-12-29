@@ -14,7 +14,7 @@ return {
         ensure_installed = {
             "lua_ls", "clangd",
             "rust_analyzer", "qmlls",
-            "pyright"
+            "pyright", "hyprls"
         }
     }
 }
