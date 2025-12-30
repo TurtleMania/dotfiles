@@ -80,7 +80,7 @@ PanelWindow {
                 Layout.fillHeight: true
                 Layout.horizontalStretchFactor: 1
 
-                MPRIS {
+                Player {
                     Layout.fillWidth: true
                     Layout.fillHeight: true
                     Layout.horizontalStretchFactor: 1
