@@ -32,3 +32,4 @@ xdg-desktop-portal-hyprland
 zoxide
 zsh
 zsh-completions
+xdg-desktop-portal-gtk
