@@ -18,6 +18,7 @@ Rectangle {
                 required property HyprlandWorkspace modelData
                 implicitWidth: 15
                 implicitHeight: 10
+                visible: modelData.monitor.name === screen.name
                 onReleased: if (!modelData.focused) { modelData.activate() }
 
                 contentItem: Text {
