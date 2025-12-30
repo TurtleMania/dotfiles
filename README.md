@@ -2,8 +2,12 @@
 These are my personal dotfiles. Don't bring opinions here.
 
 ## Installation
-Use the [packages.py](packages.py) (`./packages.py update` to install) script to manage dependencies and the
-[symlinks.py](symlinks.py) (`./symlinks.py sync` to create) script to create and manage symlinks.
+Make sure to clone submodules before starting using --recursive-submodules when
+cloning or use git submodule update --init --recursive afterwards. Use git
+submodule update --recursive --remote to update them. Use the
+[packages.py](packages.py) (`./packages.py update` to install) script to manage
+dependencies and the [symlinks.py](symlinks.py) (`./symlinks.py sync` to create)
+script to create and manage symlinks.
 
 ## Usage
 ### [packages.py](packages.py)
