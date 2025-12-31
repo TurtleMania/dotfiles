@@ -93,15 +93,10 @@ PanelWindow {
                 Layout.fillHeight: true
                 Layout.horizontalStretchFactor: 1
 
-                Text {
+                Time {
                     Layout.fillWidth: true
                     Layout.fillHeight: true
                     Layout.horizontalStretchFactor: 1
-                    text: DateTime.time() + "\n" + DateTime.date()
-                    horizontalAlignment: Text.AlignRight
-                    verticalAlignment: Text.AlignVCenter
-                    color: Colors.foreground
-                    font: Fonts.standard
                 }
             }
         }
