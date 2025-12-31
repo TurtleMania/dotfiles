@@ -2,7 +2,6 @@ import Quickshell
 import Quickshell.Wayland
 import QtQuick
 import QtQuick.Layouts
-import qs.data
 import qs.theme
 import qs.widgets
 
@@ -92,6 +91,12 @@ PanelWindow {
                 Layout.fillWidth: true
                 Layout.fillHeight: true
                 Layout.horizontalStretchFactor: 1
+
+                BatteryDisp {
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    Layout.horizontalStretchFactor: 1
+                }
 
                 Time {
                     Layout.fillWidth: true
