@@ -32,6 +32,9 @@ export PATH
 stty start undef
 stty stop undef
 
+# Enable completions
+autoload -Uz compinit && compinit
+
 # Enable zoxide
 eval "$(zoxide init zsh)"
 

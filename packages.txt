@@ -34,3 +34,4 @@ zsh
 zsh-completions
 xdg-desktop-portal-gtk
 upower
+zsh-completions
