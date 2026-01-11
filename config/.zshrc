@@ -35,6 +35,9 @@ stty stop undef
 # Enable completions
 autoload -Uz compinit && compinit
 
+# Disable case sensitive completions
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
 # Enable zoxide
 eval "$(zoxide init zsh)"
 
