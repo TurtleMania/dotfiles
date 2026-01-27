@@ -3,6 +3,7 @@ import Quickshell.Wayland
 import QtQuick
 import QtQuick.Layouts
 import qs.theme
+import qs.services
 import qs.widgets
 
 PanelWindow {
@@ -93,6 +94,7 @@ PanelWindow {
                 Layout.horizontalStretchFactor: 1
 
                 BatteryDisp {
+                    visible: Battery.active
                     Layout.fillWidth: true
                     Layout.fillHeight: true
                     Layout.horizontalStretchFactor: 1
