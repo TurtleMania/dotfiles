@@ -46,5 +46,8 @@ eval "$(zoxide init zsh)"
 
 # Set EDITOR to neovim
 export EDITOR=nvim
+# Set man page viewer to neovim
+export MANPAGER='nvim +Man!'
+export MANWIDTH=999
 
 fastfetch
